@@ -1,0 +1,196 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{amsmath}
+\usepackage{indentfirst}
+\usepackage[a4paper, margin=1in]{geometry}
+\usepackage{pdfpages}
+\usepackage[style=apa]{biblatex} % or style=authoryear, etc.
+\addbibresource{references.bib}
+\onehalfspacing
+\setlength{\parskip}{1em} 
+
+\usepackage{graphicx} % Required for inserting images
+
+\title{Does Consensus Democracy Improve the Quality of Government: A Critical Re-Assessment}
+\author{Leyi Pan}
+\date{April 2024}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+\textcite{lijphart2012} argues that consensus democracy improves the quality of government. While his regression models provide strong empirical evidence to support the claim, there have been various critiques to his conceptualisations of the consensus-majoritarian division of democracies, the selection of cases, and the logical interconnections between indices \textcite{anderson2001}. Among them, \textcite{giuliani2016} examines the relationship between institutional setup and interest group representation, and disentangles the effect of consensualism from that of corporatism on issues such as effective decision-making of governments and macroeconomic performance. His findings show that Lijphart’s categorisation of the executives-parties dimension is problematic, and removing corporatism from the executives-parties index produces strikingly different results from Lijphart’s analyses. In this essay, I use the Quality of Government 2024 dataset \parencite{qog2024} to replicate Lijphart’s multivariate regression results across three sets of indicators for the quality of government, and compared them with replications of Giuliani’s results on effective decision-making, macroeconomic performance, as well as my own extension of Giuliani’s analytical framework to the control of violence indicators. My results largely support Giuliani’s claim that the categorisation of interest group representation into institutional setup is problematic. After removing this factor from the measure of consensus democracy in the executives-parties dimension, it seems that consensus democracy does not improve the quality of government.
+
+\section{Theoretical Argument}
+Conventional wisdom had posited that majoritarian democracies, with its one-party majority cabinets typically produced by plurality elections, are more decisive and hence more effective policy-makers. \textcite{lowell1896} called it an “axiom in politics” that coalition cabinets are short-lived and weak compared with one-party cabinets. 
+
+Theoretically there are also counter arguments. Majoritarian governments may be able to make faster decisions, yet faster decisions are not necessarily better decisions. Policy decisions without careful evaluation usually result in undesirable outcomes. Moreover, although it is claimed that majoritarian governments have more coherent policy schemes, this could be offset by the constant alteration of governments. Last but not least, consensus democracy, characterised by representation and reconciliation, may perform better in maintaining civil peace as well, since these are the essential characteristics needed for inclusion of different groups of people.
+
+\section{Replication and Assessments of Lijphart’s Results}
+\subsection{Framework of Analysis}
+Lijphart had established in his prior analysis that democracies are generally divided into two camps, namely consensus democracy and majoritarian democracy. Ten differences with regard to the most important institutions and rules can be deduced from the two models of democracy. These characteristics cluster into two dimensions, the executives-parties dimension and the federal-unitary dimension. As Lijphart noticed, when regression analyses are conducted with consensus democracy on the federal-unitary dimension as the independent variable, “with one minor exception, all of the relationships are extremely weak and statistically insignificant.” In the following replications, I will follow Lijphart in focusing on the executives-parties dimension of consensus democracy.
+
+The working hypothesis is that consensus democracy improves the quality of government. To examine the working hypothesis, I conduct multivariate regressions on the effect of consensus democracy (measured by the executives-parties index) on a wide range of performance variables while controlling for the effects of economic development (measured by the human development index) and population size (logged due to extreme size differences across countries). For analysis of the effect of consensus democracy on the control of violence, the degree of societal division is controlled as well. For some indicators, outliers are removed. The rationale behind this is that many performance variables are attributable to the level of economic development and population size. Controlling for these variables isolate the effect of consensus democracy on the performance variables.
+
+To formalise this, the baseline regression model can be written as: 
+\begin{equation}
+Y_i = \beta_0 + \beta_1 \,\text{ConsensusDemocracy}_i 
+      + \beta_2 \,\text{HDI}_i 
+      + \beta_3 \,\ln(\text{Population}_i) 
+      + \varepsilon_i
+\end{equation} \noindent 
+
+where $Y_i$ is the government performance indicator for country $i$, 
+$\text{ConsensusDemocracy}_i$ is the executives--parties index (or Consensus4 later), 
+$\text{HDI}_i$ is the Human Development Index, and $\ln(\text{Population}_i)$ is the 
+logged population as a control for country size.
+ 
+For the performance variables, I include the three sets of indicators for government performance that Lijphart used in his original analysis, measuring effective decision-making, macroeconomic performance, and the control of violence respectively. The first set consists of four of the Worldwide Governance Indicators (WGI) and an additional measure of corruption called the corruption perception index; The second set consists of five pairs of macroeconomic indicators, all measured in two periods (1981-2009, 1991-2009); The third set consists of five performance variables measuring violence and the control of violence. 
+
+\subsection{Consensus Democracy and Effective Decision-Making}
+In this section, I present a replication of Lijphart’s tests on the impact of consensus democracy on effective decision-making. It is hypothesized that consensus democracy has a positive impact on effective decision-making, which is decomposed into five indicators: government effectiveness, regulatory quality, rule of law, control of corruption, and corruption perception index. Each of these five indicators is regressed on consensus democracy using the baseline specification.
+
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[width=\textwidth]{Table 1.pdf}
+  \caption{Table 1}
+  \label{fig:regtable}
+\end{figure}
+
+Table 1 presents the effect of consensus democracy on these five indicators. The first four are WGI measures for the time period 1996-2009, while the last indicator is the corruption perception index for 2010. Because all WGI variables are for the 1996-2009 period, the consensus variable chosen measures the degree of consensus democracy in the period 1981-2010. Due to lack of data for Bahamas, the number of observations for the corruption perception index is 35 instead of 36.
+
+Seen from Table 1, consensus democracy has a positive impact on all five components of effective decision-making, and the correlations are statistically significant at the 10 percent level in four of them. For regulatory quality, the correlation is weak and not statistically significant even at the 5 percent level, but the correlation is still positive.
+
+\subsection{Consensus Democracy and Macroeconomic Performance}
+
+In this section, I present a replication of Lijphart’s tests on the impact of consensus democracy on macroeconomic performance. Specifically, it reports on the effect of consensus democracy on five sets of macroeconomic indicators, namely economic growth, the consumer price index, the GDP deflator, unemployment, and budget control.
+
+Despite the fact that economic performance is closely related to the quality of macroeconomic policies of the government, it is still subject to the influence of many other factors beyond the government’s control. The level of economic development influences a country’s economic performance. It has also been suggested that small countries are more susceptible to international market fluctuations, while large countries enjoy greater power in international relations which they can use to gain more economic benefits. In this analysis, I follow Lijphart to control for the level of economic development (measured by Human Development Index (2010) and population size (measured by Population Logged (2009)). The macroeconomic models are specified by the baseline model.
+
+The number of observations vary across the dependent variables. Five ministates with populations less than half a million (Bahamas, Barbados, Iceland, Luxembourg, and Mauritius) are excluded for all macroeconomic indicators except for budget control, which is not influenced much by population size of the country. For the indicators measuring the period 1981-2009, three countries (Argentina, Uruguay, and South Korea) are excluded, as they only became recognized as democracies in the 1980s. For inflation measures, Uruguay and Israel are excluded as two outliers in the corresponding periods, as Israel faced hyperinflation in the 1980s while Uruguay faced hyperinflation in 1990-91. For unemployment, India and Botswana are excluded due to missing data. For budget control, Norway is removed as an outlier due to hefty surpluses, while the number of observations is limited by the lack of data.
+
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[width=\textwidth]{Table 2.pdf}
+  \caption{Table 2}
+  \label{fig:regtable}
+\end{figure}
+
+As can be seen from Table 2, except for economic growth in the period 1991-2009, consensus democracy has a favourable impact on macroeconomic performance in 9 out of 10 variables. However, the correlation is only strong and statistically significant at the 5 percent level in CPI in both periods, and statistically significant at the 10 percent level in unemployment in the period 1981-2009.
+
+\subsection{Consensus Democracy and the Control of Violence}
+
+In this section, I present a replication of Lijphart’s tests on the impact of consensus democracy on the control of violence. A total of five performance variables are used, including political stability and absence of violence in the period 1996-2009, internal conflict risk in the period 1990-2004, weighted domestic conflict index in periods 1981-2009 and 1990-2009, and deaths from domestic terrorism in the period 1985-2010.
+
+In addition to the level of economic development and the population size, a third control is introduced for the analysis of the control of violence – the degree of societal division. Two extreme outliers, India and Israel, are removed from the observations. For the last three indicators in Table 3, United Kingdom is also removed as an extreme outlier, because its high numbers are probably associated with the special problem of Northern Ireland. The model therefore extends to:
+
+\begin{align}
+\text{Y}_i 
+  &= \beta_0 + \beta_1 \,\text{Consensus}_i 
+     + \beta_2 \,\text{HDI}_i \nonumber \\
+  &\quad + \beta_3 \,\ln(\text{Population}_i) 
+     + \beta_4 \,\text{PluralSociety}_i 
+     + \varepsilon_i
+\end{align}
+
+where $\text{Y}_i$ refers to political stability, internal conflict risk, 
+domestic conflict indices, or deaths from terrorism, and $\text{PluralSociety}_i$ 
+captures the degree of societal division.
+
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[width=\textwidth]{Table 3.pdf}
+  \caption{Table 3}
+  \label{fig:regtable}
+\end{figure}
+
+Shown in Table 3, consensus democracy has a positive correlation with the first two variables, and a negative correlation with the last three. Given the nature of the variables, consensus democracy has a favourable effect on the control of violence on all five indicators. Out of the five, the correlation with political stability and absence of violence is very strong and statistically significant at the 1 percent level. Except for the correlation with weighted domestic conflict index in the period 1981-2009, which does not exhibit statistical significance even at the 10 percent level, the remaining correlations are all strong and statistically significant at the 5 percent level.
+
+\section{Issues with Categories}
+While there are various criticisms on Lijphart’s selection of variables and methodologies of analysis, I want to focus on one particular issue in this essay, which is the issue with categorisation. As \textcite{taagepera2003} points out, some attributes, specifically, corporatism and central bank independence, appeared foreign to the core ideas of power-sharing and power-dispersion. Corporatism, while belonging to the same empirical cluster of variables with PR, multiparty system, executive-legislative balance of power and coalition cabinets, seems to have little in common with the latter four. \textcite{giuliani2016} argues that the correlation matrix and the factor analysis performed by Lijphart is insufficient to guarantee that these factors are theoretically congruent with a specific type of democratic system.
+
+\subsection{Giuliani’s Analysis}
+Here I adopt Giuliani’s analytical framework, and extend his analysis on consensualism and WGI and macroeconomic performance to control of violence as well. 
+
+Giuliani’s replication of Lijphart’s analysis followed in the use of identical dataset, one-tailed tests, and in not presenting results for the federal-unitary dimension. However, he made one modification, which is to decompose Lijphart’s additive five-variable executives-parties index into a four-variable index called “consensus 4”, and to maintain the degree of corporatism on its own. Accordingly, I replace the executives–parties index with two separate terms, leading to the following specification:
+\begin{equation}
+Y_i = \beta_0 + \beta_1 \,\text{Consensus4}_i 
+      + \beta_2 \,\text{Corporatism}_i 
+      + \beta_3 \,\text{HDI}_i 
+      + \beta_4 \,\ln(\text{Population}_i) 
+      + \varepsilon_i
+\end{equation}
+
+where $\text{Consensus4}_i$ is the executives--parties index excluding corporatism, 
+$\text{Corporatism}_i$ is a separate measure of corporatist interest group systems, 
+and the remaining terms are as defined in (1) and (2).
+
+In the following two sections, I will replicate Giuliani’s analysis on effective decision-making and macroeconomic performance, adding an additional period of data to Giuliani’s analysis on macroeconomic performance so that the table presented can be better contrasted with Lijphart’s original table.
+
+\subsection{Replication with Consensus 4 and Corporatism: Effective Decision-Making}
+
+Table 4 presents the replicated analyses on the effect of consensus democracy on effective decision-making, decomposing the executives-parties index into consensus 4 and corporatism.
+
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[width=\textwidth]{Table 4.pdf}
+  \caption{Table 4}
+  \label{fig:regtable}
+\end{figure}
+
+As we can see, excluding corporatism from the consensus democracy measure renders all the regression coefficients of consensus 4 insignificant and, in 4 out of the 5 indicators, changes their sign. Meanwhile, corporatism is positively corelated to all 5 of the indicators. The correlation is strong and statistically significant at the 5 percent level for government effectiveness, control of corruption and corruption perception index. It is statistically significant at the 10 percent level for the rule of law.
+
+Comparing with Table 1, we can see that the favourable effect of Lijphart’s original consensus variable on effective-decision making indicators is entirely attributable to corporatism, controlling for human development index and logged population. Consensus 4 variable, with corporatism accounted for separately, not only has no statistically significant relationship with the indicators, but also has an adverse effect on effective decision-making indicators in 4 out of 5 cases.
+
+\subsection{Replication with Consensus 4 and Corporatism: Macroeconomic Indicators}
+
+Table 5 presents the replicated analyses on the effect of consensus democracy on macroeconomic indicators, decomposing the executives-parties index into consensus 4 and corporatism. In addition to replicating Giuliani’s results on the period 1991-2009, I added 5 indicators measuring macroeconomic performance from 1981 to 2009 in order to match with Lijphart’s original table for comparison.
+
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[width=\textwidth]{Table 5.pdf}
+  \caption{Table 5}
+  \label{fig:regtable}
+\end{figure}
+
+Contrary to the findings of Table 2, consensus 4 is negatively corelated to economic growth and positively corelated to unemployment. Its corelation with budget control is mixed, as the corelation is positive with budget control in the shorter period of 2003-07, but negative with budget control in the longer period of 2000-08. Meanwhile, it has a favourable negative corelation with all 4 indicators of inflation, assuming low but positive inflation is desirable. None of these corelations is statistically significant even at the 10 percent level.
+
+Meanwhile, in 4 out of 10 macroeconomic indicators, corporatism act in the opposite direction of consensus 4. Noticeably, corporatism is strongly corelated to unemployment in both periods. The corelation is statistically significant at the 5 percent level for the longer period of 1981-2009, and at the 10 percent level for the shorter period of 1991-2009.
+
+Comparing to Table 2, it is observed that the favourable effect of Lijphart’s original consensus measure on economic growth in the period 1981-2009, unemployment in the periods 1981-2009 and 1991-2009, and budget control in the period 2000-2008, is entirely attributable to the contribution of corporatism, controlling for human development index and logged population and removing outliers accordingly. In these 4 measures, consensus 4 even has an adverse effect opposite in sign to corporatism.
+
+\subsection{Extending the Analysis to Control of Violence}
+
+Adopting Giuliani’s measure of consensus 4 and corporatism, I extend the analysis to the control of violence, the third set of indicators employed by Lijphart to measure the quality of government.  Same as the previous analysis on the control of violence, I controlled for the level of economic development, population size, and the degree of societal division. Two extreme outliers, India and Israel, are removed from the observations. Formally, the model specification becomes:
+\begin{align}
+Y_i &= \beta_0 + \beta_1 \,\text{Consensus4}_i 
+      + \beta_2 \,\text{Corporatism}_i 
+      + \beta_3 \,\text{HDI}_i \nonumber \\
+    &\quad + \beta_4 \,\ln(\text{Population}_i) 
+      + \beta_5 \,\text{PluralSociety}_i 
+      + \varepsilon_i
+\end{align}
+
+where $\text{PluralSociety}_i$ captures the degree of societal division, and the remaining terms are as defined in (3).
+
+In Table 6, I present the multivariate regressions on the effect of consensus democracy on the control of violence, decomposing the executives-parties index into consensus 4 and corporatism.
+
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[width=\textwidth]{Table 2.pdf}
+  \caption{Table 2}
+  \label{fig:regtable}
+\end{figure}
+
+Consensus 4 and corporatism both exhibit favourable impact on the control of violence, positively corelated to the political stability and absence of violence measure in the period 1996-2009 and the risk of internal conflict measure in the period 1990-2004, and negatively corelated to weighted domestic conflict indices in the periods 1981-2009 and 1990-2009 as well as the deaths from domestic terrorism in the period 1985-2010. The corelations between consensus 4 and all five indicators are statistically insignificant even at the 10 percent level, while corporatism has a strong and statistically significant corelation with 2 out of 5 indicators at the 10 percent level.
+
+\section{Conclusion}
+
+In general, the three replications with consensus 4 and corporatism further question the inclusion of pluralist/corporatist interest group system into the majoritarian/consensus models of democracy. The incongruence between consensus 4 and corporatism provides strong evidence for the claim that corporatism does not fit into the same framework as the other four attributes that constitute the executives-parties dimension in Lijphart’s analysis. As \textcite{giuliani2016} points out, they likely ‘work’ through different mechanisms, often generating different results. It seems that, after removing this factor from the measure of consensus democracy in the executives-parties dimension, it seems that consensus democracy does not improve the quality of government.
+
+\printbibliography
+
+
+\end{document}
