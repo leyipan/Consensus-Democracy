@@ -39,6 +39,7 @@ model_dm5 <- lm(data = lijphart, corruption_perception_index_2010 ~ exec_parties
 models_dm <- list(model_dm1, model_dm2, model_dm3, model_dm4,model_dm5)
 stargazer(models_dm, 
           type = "latex",
+          font.size = "small",
           title="Multivariate regression analyses of the effect of consensus democracy (executives-parties dimension) on government performance variables, with controls for the effects of the level of economic development and logged population size, and with extreme outliers removed",
           notes.label = "Significance levels",
           dep.var.caption = "DV: WGI measures",
@@ -56,6 +57,7 @@ model_dmc5 <- lm(data = giuliani, Corrup_percep_2010 ~ Cons4_81_10 + Corp_81_10 
 models_dmc <- list(model_dmc1, model_dmc2, model_dmc3, model_dmc4, model_dmc5)
 stargazer(models_dmc, 
           type = "latex",
+          font.size = "small",
           title="Consensualism and worldwide governance indicators: Replication with Consensus 4 and Corporatism",
           notes.label = "Significance levels",
           dep.var.caption = "DV: WGI measures",
@@ -81,6 +83,7 @@ model_ep5b <- lm(data = ex2, Budget_03_07 ~ exec_parties_1981_2010 + hdi_2010 + 
 models_ep <- list(model_ep1, model_ep1b, model_ep2, model_ep2b, model_ep3, model_ep3b, model_ep4, model_ep4b, model_ep5, model_ep5b)
 stargazer(models_ep, 
           type = "latex",
+          font.size = "small",
           title="Multivariate regression analyses of the effect of consensus democracy (executives-parties dimension) on macroeconomic indicators",
           notes.label = "Significance levels",
           dep.var.caption = "DV: Macroeconomic Indicators",
@@ -103,6 +106,7 @@ model_epc5b <- lm(data = ex2, Budget_03_07 ~ Cons4_81_10 + Corp_81_10 + hdi_2010
 models_epc <- list(model_epc1, model_epc1b, model_epc2, model_epc2b, model_epc3, model_epc3b, model_epc4, model_epc4b, model_epc5, model_epc5b)
 stargazer(models_epc, 
           type = "latex",
+          font.size = "small",
           title="Consensualism and macroeconomic performance: Replication with Consensus 4 and Corporatism",
           notes.label = "Significance levels",
           dep.var.caption = "DV: Macroeconomic Indicators",
@@ -128,6 +132,7 @@ model_v5 <- lm(data = sin_is_in, deaths_from_domestic_terrorism_1985_2010 ~ exec
 models_v <- list(model_v1, model_v2, model_v3, model_v4, model_v5)
 stargazer(models_v, 
           type = "latex",
+          font.size = "small",
           title = "Multivariate regression analyses of the effect of consensus democracy (executives-parties dimension) on control of violence",
           notes.label = "Significance levels",
           dep.var.caption = "DV: Control of Violence Indicators",
@@ -144,6 +149,7 @@ model_vc5 <- lm(data = sin_is_in, deaths_from_domestic_terrorism_1985_2010 ~ Con
 models_vc <- list(model_vc1, model_vc2, model_vc3, model_vc4, model_vc5)
 stargazer(models_vc,
           type = "latex",
+          font.size = "small",
           title="Consensualism and control of violence: Replication with Consensus 4 and Corporatism",
           notes.label = "Significance levels",
           dep.var.caption = "DV: Control of Violence Indicators",
