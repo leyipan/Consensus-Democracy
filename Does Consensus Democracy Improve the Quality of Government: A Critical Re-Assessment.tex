@@ -1,4 +1,5 @@
 \documentclass[12pt]{article}
+\usepackage{pdflscape}
 \usepackage{graphicx}
 \usepackage{setspace}
 \usepackage{amsmath}
@@ -52,12 +53,9 @@ For the performance variables, I include the three sets of indicators for govern
 \subsection{Consensus Democracy and Effective Decision-Making}
 In this section, I present a replication of Lijphart’s tests on the impact of consensus democracy on effective decision-making. It is hypothesized that consensus democracy has a positive impact on effective decision-making, which is decomposed into five indicators: government effectiveness, regulatory quality, rule of law, control of corruption, and corruption perception index. Each of these five indicators is regressed on consensus democracy using the baseline specification.
 
-\begin{figure}[!ht]
-  \centering
-  \includegraphics[width=\textwidth]{Table 1.pdf}
-  \caption{Table 1}
-  \label{fig:regtable}
-\end{figure}
+\begin{landscape}
+  \input{output/wgi_original}
+\end{landscape}
 
 Table 1 presents the effect of consensus democracy on these five indicators. The first four are WGI measures for the time period 1996-2009, while the last indicator is the corruption perception index for 2010. Because all WGI variables are for the 1996-2009 period, the consensus variable chosen measures the degree of consensus democracy in the period 1981-2010. Due to lack of data for Bahamas, the number of observations for the corruption perception index is 35 instead of 36.
 
@@ -71,14 +69,11 @@ Despite the fact that economic performance is closely related to the quality of 
 
 The number of observations vary across the dependent variables. Five ministates with populations less than half a million (Bahamas, Barbados, Iceland, Luxembourg, and Mauritius) are excluded for all macroeconomic indicators except for budget control, which is not influenced much by population size of the country. For the indicators measuring the period 1981-2009, three countries (Argentina, Uruguay, and South Korea) are excluded, as they only became recognized as democracies in the 1980s. For inflation measures, Uruguay and Israel are excluded as two outliers in the corresponding periods, as Israel faced hyperinflation in the 1980s while Uruguay faced hyperinflation in 1990-91. For unemployment, India and Botswana are excluded due to missing data. For budget control, Norway is removed as an outlier due to hefty surpluses, while the number of observations is limited by the lack of data.
 
-\begin{figure}[!ht]
-  \centering
-  \includegraphics[width=\textwidth]{Table 2.pdf}
-  \caption{Table 2}
-  \label{fig:regtable}
-\end{figure}
-
 As can be seen from Table 2, except for economic growth in the period 1991-2009, consensus democracy has a favourable impact on macroeconomic performance in 9 out of 10 variables. However, the correlation is only strong and statistically significant at the 5 percent level in CPI in both periods, and statistically significant at the 10 percent level in unemployment in the period 1981-2009.
+
+\begin{landscape}
+  \input{output/wgi_consensus4}
+\end{landscape}
 
 \subsection{Consensus Democracy and the Control of Violence}
 
@@ -99,12 +94,9 @@ where $\text{Y}_i$ refers to political stability, internal conflict risk,
 domestic conflict indices, or deaths from terrorism, and $\text{PluralSociety}_i$ 
 captures the degree of societal division.
 
-\begin{figure}[!ht]
-  \centering
-  \includegraphics[width=\textwidth]{Table 3.pdf}
-  \caption{Table 3}
-  \label{fig:regtable}
-\end{figure}
+\begin{landscape}
+  \input{output/ep_original}
+\end{landscape}
 
 Shown in Table 3, consensus democracy has a positive correlation with the first two variables, and a negative correlation with the last three. Given the nature of the variables, consensus democracy has a favourable effect on the control of violence on all five indicators. Out of the five, the correlation with political stability and absence of violence is very strong and statistically significant at the 1 percent level. Except for the correlation with weighted domestic conflict index in the period 1981-2009, which does not exhibit statistical significance even at the 10 percent level, the remaining correlations are all strong and statistically significant at the 5 percent level.
 
@@ -133,12 +125,9 @@ In the following two sections, I will replicate Giuliani’s analysis on effecti
 
 Table 4 presents the replicated analyses on the effect of consensus democracy on effective decision-making, decomposing the executives-parties index into consensus 4 and corporatism.
 
-\begin{figure}[!ht]
-  \centering
-  \includegraphics[width=\textwidth]{Table 4.pdf}
-  \caption{Table 4}
-  \label{fig:regtable}
-\end{figure}
+\begin{landscape}
+  \input{output/ep_consensus4}
+\end{landscape}
 
 As we can see, excluding corporatism from the consensus democracy measure renders all the regression coefficients of consensus 4 insignificant and, in 4 out of the 5 indicators, changes their sign. Meanwhile, corporatism is positively corelated to all 5 of the indicators. The correlation is strong and statistically significant at the 5 percent level for government effectiveness, control of corruption and corruption perception index. It is statistically significant at the 10 percent level for the rule of law.
 
@@ -148,12 +137,9 @@ Comparing with Table 1, we can see that the favourable effect of Lijphart’s or
 
 Table 5 presents the replicated analyses on the effect of consensus democracy on macroeconomic indicators, decomposing the executives-parties index into consensus 4 and corporatism. In addition to replicating Giuliani’s results on the period 1991-2009, I added 5 indicators measuring macroeconomic performance from 1981 to 2009 in order to match with Lijphart’s original table for comparison.
 
-\begin{figure}[!ht]
-  \centering
-  \includegraphics[width=\textwidth]{Table 5.pdf}
-  \caption{Table 5}
-  \label{fig:regtable}
-\end{figure}
+\begin{landscape}
+  \input{output/violence_original}
+\end{landscape}
 
 Contrary to the findings of Table 2, consensus 4 is negatively corelated to economic growth and positively corelated to unemployment. Its corelation with budget control is mixed, as the corelation is positive with budget control in the shorter period of 2003-07, but negative with budget control in the longer period of 2000-08. Meanwhile, it has a favourable negative corelation with all 4 indicators of inflation, assuming low but positive inflation is desirable. None of these corelations is statistically significant even at the 10 percent level.
 
@@ -177,12 +163,9 @@ where $\text{PluralSociety}_i$ captures the degree of societal division, and the
 
 In Table 6, I present the multivariate regressions on the effect of consensus democracy on the control of violence, decomposing the executives-parties index into consensus 4 and corporatism.
 
-\begin{figure}[!ht]
-  \centering
-  \includegraphics[width=\textwidth]{Table 2.pdf}
-  \caption{Table 2}
-  \label{fig:regtable}
-\end{figure}
+\begin{landscape}
+  \input{output/violence_consensus4}
+\end{landscape}
 
 Consensus 4 and corporatism both exhibit favourable impact on the control of violence, positively corelated to the political stability and absence of violence measure in the period 1996-2009 and the risk of internal conflict measure in the period 1990-2004, and negatively corelated to weighted domestic conflict indices in the periods 1981-2009 and 1990-2009 as well as the deaths from domestic terrorism in the period 1985-2010. The corelations between consensus 4 and all five indicators are statistically insignificant even at the 10 percent level, while corporatism has a strong and statistically significant corelation with 2 out of 5 indicators at the 10 percent level.
 
